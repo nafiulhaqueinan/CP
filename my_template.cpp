@@ -1,13 +1,13 @@
 /*
-	Author : LazyWizard(Md.Nafiul Haque)
+Author : LazyWizard(Md.Nafiul Haque)
 "Success is not final,
  failure is not fatal: 
  it is the courage to continue that counts."
   - Winston Churchill
 */
 #include<bits/stdc++.h>
-//#include <ext/pb_ds/assoc_container.hpp>
-//using namespace __gnu_pbds;
+#include <ext/pb_ds/assoc_container.hpp>
+using namespace __gnu_pbds;
 using namespace std;
 #ifndef _GLIBCXX_NO_ASSERT
 //#include<cassert>
@@ -24,10 +24,11 @@ using namespace std;
 //#include <cuchar>
 #endif
 // Declaring Ordered Set
-/*typedef tree<int, null_type, less<int>, rb_tree_tag,
-        tree_order_statistics_node_update>
-    pbds;
-*/
+typedef tree<int, null_type, less<int>, rb_tree_tag,tree_order_statistics_node_update>pbds;
+typedef vector<int> vi;
+typedef vector<pair<int,int>> vpi;
+typedef pair<int,int> pi;
+
 #define     INF 100000000000000007
 #define     pii 3.14159265358979323846264338327
 #define     modd 100010
@@ -67,39 +68,17 @@ void modadd(int &a , int b) {a=((a%modd)+(b%modd))%modd;}
 void modsub(int &a , int b) {a=((a%modd)-(b%modd)+modd)%modd;}
 void modmul(int &a , int b) {a=((a%modd)*(b%modd))%modd;}
 
-typedef vector<int> vi;
-typedef vector<pair<int,int>> vpi;
-typedef pair<int,int> pi;
-
-inline int modmul(int a,int b,int mod){
-    int ans =0;
-    a=a%mod;
-    while (b>0)
-    {
-        if(b%2)ans=(ans%mod + a%mod)%mod;
-        a=(a%mod * 2%mod)%mod;
-        b/=2;
-    }
-    return ans%mod;
-}
+inline int modmul(int a,int b,int mod){int ans =0;a=a%mod;
+    while (b>0){if(b%2)ans=(ans%mod + a%mod)%mod;a=(a%mod * 2%mod)%mod;b/=2;}
+    return ans%mod;}
 // rounds up the division
 int rup(int ik,int ikk){if(ik%ikk==0) return ik/ikk;else return (ik/ikk)+1;}
 int gcd(int a,int b){if(b==0) return a;return gcd(b,a%b);}
 int lcm(int a, int b){return (a*b)/gcd(a,b);}
-int modpow(int x1,int n1,int m1){
-    if (n1 == 0) return 1%m1;
-    int u1 = modpow(x1,n1/2,m1);
-    u1 = (u1*u1)%m1;
-    if (n1%2 == 1) u1 = (u1*x1)%m1;
-    return u1;
-}
-int npow(int a,int b){
-    if(b==0) return 1;
-    int c=npow(a,b/2);
-    int u=c*c;
-    if(b%2==1)u*=a;
-    return u;
-}
+int modpow(int x1,int n1,int m1){if (n1 == 0) return 1%m1;int u1 = modpow(x1,n1/2,m1);u1 = (u1*u1)%m1;
+    if (n1%2 == 1) u1 = (u1*x1)%m1;return u1;}
+int npow(int a,int b){if(b==0) return 1;int c=npow(a,b/2);int u=c*c;
+    if(b%2==1)u*=a;return u;}
 //provide a fast, non-cryptographic hash 
 // struct boost{
 //     static uint64_t splitmix64(uint64_t x) {
