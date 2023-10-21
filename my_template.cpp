@@ -41,13 +41,15 @@ typedef pair<int,int> pi;
 #define pf          push_front
 #define F           first
 #define S           second
-#define vint        std::vector<int> 
 #define mp          midpoint
 #define READ(x)     freopen(x,"r",stdin)
 #define WRITE(x)    freopen(x,"w",stdout)
 #define BOOST       ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
 #define chk         printf("Came Here!!!!!!!!!!!!!!!\n")
 #define bug(...) __f (#__VA_ARGS__,__VA_ARGS__)
+#define printi(v) for(auto i : v) cout<<i<<" "; cout<<endl;
+#define printj(v) for(auto j : v) cout<<j<<" "; cout<<endl;
+#define printk(v) for(auto k : v) cout<<k<<" "; cout<<endl;
 #define fr(i,n)     for(int i=0; i<(n); i++)
 #define rep(i,a,n)  for(int i=(a);i<=(n);i++)
 #define fat(n)      for(auto x:n)
@@ -56,6 +58,10 @@ typedef pair<int,int> pi;
 #define mxe(v)      *max_element(all(v))// find max element in vector
 #define mne(v)      *min_element(all(v))// find min element in vector
 #define unq(v)  v.resize(distance(v.begin(), unique(v.begin(), v.end())));// remove all duplicate from vector
+#define YES         cout<<"YES"<<endl;
+#define NO          cout<<"NO"<<endl;
+#define dec_srt(v)  sort(all(v));//desending sort
+#define sum(v)      accumulate(all(v), 0LL); 
 //make sure to sort before use unq
 
 template<typename typC,typename typD> istream &operator>>(istream &cin,pair<typC,typD> &a) { return cin>>a.first>>a.second; }
@@ -74,6 +80,8 @@ inline int modmul(int a,int b,int mod){int ans =0;a=a%mod;
 // rounds up the division
 int rup(int ik,int ikk){if(ik%ikk==0) return ik/ikk;else return (ik/ikk)+1;}
 int gcd(int a,int b){if(b==0) return a;return gcd(b,a%b);}
+int getarraygcd(ull a[],ull n){int ans=a[0];
+    for(int i=0;i<=n-1;i++){if(a[i]==0){continue;}ans=__gcd(ans,a[i]);}return ans;}
 int lcm(int a, int b){return (a*b)/gcd(a,b);}
 int modpow(int x1,int n1,int m1){if (n1 == 0) return 1%m1;int u1 = modpow(x1,n1/2,m1);u1 = (u1*u1)%m1;
     if (n1%2 == 1) u1 = (u1*x1)%m1;return u1;}
