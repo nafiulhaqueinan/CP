@@ -103,6 +103,7 @@ int npow(int a,int b){if(b==0) return 1;int c=npow(a,b/2);int u=c*c;
 // };
 
 void solve(){
+   int n ;cin>>n;
    
 }
 
