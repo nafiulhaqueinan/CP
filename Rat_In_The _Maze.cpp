@@ -8,6 +8,10 @@ bool isvalid(int i,int j,int n,int m,vector<vector<int>> &v){
 	if(i>=0 and j>=0 and i<n and j<m and v[i][j]==0)return true;
 	else return false;
 }
+
+
+
+
 void generate(int i,int j,int n,int m, vector<vector<int>> &v,string &path){
 	if(i== n-1 and j==m-1){cout<<path<<endl;return;}
 	v[i][j]=1;
