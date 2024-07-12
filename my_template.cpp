@@ -10,7 +10,7 @@ Author : LazyWizard(Md.Nafiul Haque)
 using namespace __gnu_pbds;
 using namespace std;
 #ifndef _GLIBCXX_NO_ASSERT
-//#include<cassert>
+#include<cassert>
 #endif
 //it for C++11 standard or later is supported by the compiler.
 #if __cplusplus >= 201103L
