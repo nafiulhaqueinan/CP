@@ -1,4 +1,7 @@
 #include<bits/stdc++.h>
+
+
+
 using namespace std;
 //4 way that why 4
 int di[]={0,1,0,-1};
