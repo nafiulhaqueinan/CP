@@ -1,0 +1,2 @@
+// auto itr = lower_bound(v.begin(), v.end(), key) ;
+// index = distance(v.begin(), itr);
