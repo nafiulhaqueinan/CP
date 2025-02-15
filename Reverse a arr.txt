@@ -1,0 +1,6 @@
+for(auto x:v)
+  x*-1;
+srt(v)
+for(auto x:v)
+  x*-1;
+array is reversed -1 tecnic 
