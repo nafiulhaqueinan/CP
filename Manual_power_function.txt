@@ -1,0 +1,9 @@
+int power(int a,int b){
+    if(b==0)
+        return 1;
+    int h_pow=power(a,b/2);
+    if(b&1)
+        return h_pow*h_pow*a;
+    else
+        return h_pow*h_pow;
+}
