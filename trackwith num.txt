@@ -1,0 +1,17 @@
+void solve() {
+    int m, a, b, c; cin >> m >> a >> b >> c;
+    int ans = 0, rem = 0;
+    
+    // Allocate to a
+    ans += min(m, a);
+    rem += m - min(m, a);
+    
+    // Allocate to b
+    ans += min(m, b);
+    rem += m - min(m, b);
+    
+    // Allocate to c using remaining capacity
+    ans += min(rem, c);
+    
+    cout << ans << '\n';
+}
